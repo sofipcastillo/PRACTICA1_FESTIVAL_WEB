@@ -76,35 +76,6 @@ nav {
 }
 
 /* HEADER */
-
-header .theme-switch {
-  display: flex;
-  gap: 1rem;
-  font-size: 1.1rem;
-}
-
-header .theme-switch > div:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-header .theme-switch .to-dark-mode {
-  padding: 10px 20px;
-  border: var(--text-light) 2px solid;
-  border-radius: 30px;
-}
-
-header .theme-switch .to-light-mode {
-  padding: 10px 20px;
-  border: var(--text-dark) 2px solid;
-  border-radius: 30px;
-}
-
-header .theme-switch .hide-cont {
-  display: none;
-}
-
-/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
