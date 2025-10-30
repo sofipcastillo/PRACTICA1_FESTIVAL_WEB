@@ -1,9 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REPASO HTML5 & CSS3</title>
+    <title>Luna Sound Festival</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
+  <body class="dark-theme">
+    <!-- Navegación principal -->
+    <nav>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <div class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#programa">Programa</a></li>
+          <li><a href="#entradas">Entradas</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h1>Luna Sound Festival</h1>
+        <p class="lead">
+          3 días de música, arte y buena vibra 12, 13 y 14 de junio
+        </p>
+        <a href="#entradas" class="btn">Comprar Entradas</a>
+      </div>
+    </section>
+
+    <!-- Programa -->
+    <section id="programa" class="section">
+      <div class="container">
+        <h2>Programa</h2>
+        <p>Artistas confirmados</p>
+        <div class="lineup">
+          <!-- Aquí van los artistas -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Entradas -->
+    <section id="entradas" class="section">
+      <div class="container">
+        <h2>Entradas</h2>
+        <p>Compra tus entradas y disfruta de una experiencia inolvidable.</p>
+        <button id="open-ticket" class="btn">Comprar</button>
+      </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="section">
+      <div class="container">
+        <h2>Ubicación</h2>
+        <p>Plaza Central — Ciudad</p>
+        <!--como pongo el mapa??-->
+        <div class="mapa">mapa</div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section">
+      <div class="container">
+        <h2>Contacto</h2>
+        <form id="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>
+        © <span id="year"></span> Luna Sound Festival — creado por Sofia
+        Piedrahita
+      </p>
+    </footer>
+  </body>
 </html>
