@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luna Sound Festival</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
   </head>
+
   <body class="dark-theme">
     <!-- Navegación principal -->
     <nav>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#programa">Programa</a></li>
-          <li><a href="#entradas">Entradas</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
+      <a href="#inicio" class="logo">
+        <img src="img/logo.png" alt="Logo Luna Sound Festival" />
+      </a>
+
+      <ul class="menu">
+        <li class="menulink"><a href="#inicio">Inicio</a></li>
+        <li class="menulink"><a href="#programa">Programa</a></li>
+        <li class="menulink"><a href="#entradas">Entradas</a></li>
+        <li class="menulink"><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="burger">
+        <i class="fas fa-bars"></i>
       </div>
     </nav>
 
     <!-- Sección principal -->
     <section id="inicio" class="hero">
+      <video autoplay muted loop playsinline class="video-bg">
+        <source src="videos/festival.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+
       <div class="container">
         <h1>Luna Sound Festival</h1>
         <p class="lead">
@@ -39,7 +52,7 @@
         <h2>Programa</h2>
         <p>Artistas confirmados</p>
         <div class="lineup">
-          <!-- Aquí van los artistas -->
+          <!-- Aquí van los artistas ??? -->
         </div>
       </div>
     </section>
@@ -57,9 +70,8 @@
     <section id="ubicacion" class="section">
       <div class="container">
         <h2>Ubicación</h2>
-        <p>Plaza Central — Ciudad</p>
-        <!--como pongo el mapa??-->
-        <div class="mapa">mapa</div>
+        <p>Plaza Central</p>
+        <div class="mapa">mapa???</div>
       </div>
     </section>
 
