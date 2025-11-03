@@ -33,14 +33,19 @@
     <!-- Sección principal -->
     <section id="inicio" class="hero">
       <video autoplay muted loop playsinline class="video-bg">
-        <source src="videos/festival.mp4" type="video/mp4" />
+        <source src="videos/video.webm" type="video/webm" />
         Tu navegador no soporta videos HTML5.
       </video>
 
       <div class="container">
+        <img
+          src="img/name.png"
+          alt="Logo Luna Sound Festival"
+          class="hero-logo"
+        />
         <h1>Luna Sound Festival</h1>
         <p class="lead">
-          3 días de música, arte y buena vibra 12, 13 y 14 de junio
+          3 días de música, arte y buena vibra — 12, 13 y 14 de junio
         </p>
         <a href="#entradas" class="btn">Comprar Entradas</a>
       </div>
@@ -49,10 +54,42 @@
     <!-- Programa -->
     <section id="programa" class="section">
       <div class="container">
-        <h2>Programa</h2>
-        <p>Artistas confirmados</p>
-        <div class="lineup">
-          <!-- Aquí van los artistas ??? -->
+        <h2>Lineup por Día</h2>
+
+        <div class="lineup-container">
+          <!-- Día 1 -->
+          <div class="day-box">
+            <div class="day-header">20 de junio</div>
+            <div class="artists">
+              <h3>Tyler, The Creator</h3>
+              <h3>Lorde</h3>
+              <p>Peggy Gou · Turnstile · Addison Rae · Katseye</p>
+              <p>Djo · The Dare · The Warning · Nicolás y los Fumadores</p>
+            </div>
+          </div>
+
+          <!-- Día 2 -->
+          <div class="day-box">
+            <div class="day-header">21 de junio</div>
+            <div class="artists">
+              <h3>The Killers</h3>
+              <h3>Peso Pluma</h3>
+              <p>Young Miko · Kygo · Tom Morello · Mochakk</p>
+              <p>HVOB (Live) · Universe · Aria Vega</p>
+            </div>
+          </div>
+
+          <!-- Día 3 -->
+          <div class="day-box">
+            <div class="day-header">22 de junio</div>
+            <div class="artists">
+              <h3>Sabrina Carpenter</h3>
+              <h3>Skrillex</h3>
+              <h3>Deftones</h3>
+              <p>Doechii · Interpol · Men I Trust · Viagra Boys</p>
+              <p>Lasso · Wost · DJ Babatr · Zarigüeya</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -62,7 +99,56 @@
       <div class="container">
         <h2>Entradas</h2>
         <p>Compra tus entradas y disfruta de una experiencia inolvidable.</p>
-        <button id="open-ticket" class="btn">Comprar</button>
+
+        <form id="form-entradas">
+          <div class="entrada-item">
+            <label for="general"> Entrada General - 50€ </label>
+            <input
+              type="number"
+              id="general"
+              min="0"
+              max="10"
+              value="0"
+              data-price="50"
+            />
+          </div>
+
+          <div class="entrada-item">
+            <label for="vip">Entrada VIP - 90€</label>
+            <input
+              type="number"
+              id="vip"
+              min="0"
+              max="10"
+              value="0"
+              data-price="90"
+            />
+          </div>
+
+          <div class="entrada-item">
+            <label for="full">Full Pass (3 días) - 120€</label>
+            <input
+              type="number"
+              id="full"
+              min="0"
+              max="10"
+              value="0"
+              data-price="120"
+            />
+          </div>
+
+          <div class="total-precio">
+            <p>Total:</p>
+            <p id="totalPrice">0.00 €</p>
+          </div>
+
+          <input
+            type="submit"
+            id="comprarEntradas"
+            value="Comprar Entradas"
+            class="btn disabled"
+          />
+        </form>
       </div>
     </section>
 

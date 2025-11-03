@@ -66,15 +66,10 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
-  background: #f72585;
+  background: var(--color-acento);
   color: #ccc;
-  box-shadow: 0px 0.6px 1.6px rgba(0, 0, 0, 0.25),
-    0px 1.4px 3.6px rgba(0, 0, 0, 0.19), 0px 2.4px 6.3px rgba(0, 0, 0, 0.163),
-    0px 3.8px 10px rgba(0, 0, 0, 0.143), 0px 5.8px 15.5px rgba(0, 0, 0, 0.125),
-    0px 9px 24.1px rgba(0, 0, 0, 0.107), 0px 15px 40px rgba(0, 0, 0, 0.087),
-    0px 30px 80px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .menu {
@@ -89,31 +84,34 @@ nav {
 }
 
 .menulink a {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .menulink:hover a {
-  color: var(--accent-color);
+  color: #f9c80e;
 }
 
 .burger {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: none;
+  color: #fff;
 }
 
-/* HEADER */
+/* HERO */
 .hero {
   position: relative;
   overflow: hidden;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--texto-claro);
+  margin-top: 70px;
 }
 
 /* VIDEO */
@@ -128,18 +126,25 @@ nav {
   filter: brightness(0.4);
 }
 
+/* LOGO NAME */
+.hero-logo {
+  width: 500px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
 .hero h1 {
-  font-size: 3rem;
-  color: var(--color-acento);
+  font-size: 2rem;
+  color: var(--texto-claro);
   letter-spacing: 2px;
 }
 
 .hero .lead {
   font-size: 1.2rem;
   margin: 1rem 0;
-  color: var(--texto-claro);
 }
 
+/* BOTONES */
 .btn {
   background-color: var(--color-acento);
   color: var(--texto-claro);
@@ -151,7 +156,7 @@ nav {
 }
 
 .btn:hover {
-  background-color: #ff5c3d;
+  background-color: #f9c80e;
 }
 
 /* SECCIONES */
@@ -174,6 +179,141 @@ section h2 {
 section p {
   max-width: 600px;
   line-height: 1.5;
+  text-align: center;
+}
+
+/* SECCIÓN PROGRAMA (LINEUP) */
+#lineup {
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-claro);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+#lineup h2 {
+  color: var(--color-acento);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.lineup-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Caja de cada día */
+.day-box {
+  background-color: #2a2a55;
+  border: 2px solid var(--color-acento);
+  border-radius: 15px;
+  width: 300px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(247, 37, 133, 0.5);
+}
+
+/* Fecha arriba */
+.day-header {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+}
+
+/*  Texto de artistas */
+.artists h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 0.6rem 0;
+  color: #f9c80e;
+}
+
+.artists p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.3rem 0;
+  color: var(--texto-claro);
+}
+
+/* FORMULARIO ENTRADAS */
+#form-entradas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-acento);
+}
+
+.entrada-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.entrada-item label {
+  font-family: orbitron, sans-serif;
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.entrada-item input[type="number"] {
+  width: 80px;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.entrada-item input[type="number"]:focus {
+  outline: none;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 5px var(--color-acento);
+}
+
+.total-precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-acento);
+}
+
+#comprarEntradas.disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  text-align: center;
 }
 
 /* FORMULARIO DE CONTACTO */
@@ -187,8 +327,7 @@ form {
 }
 
 input,
-textarea,
-select {
+textarea {
   width: 100%;
   padding: 0.6rem;
   border-radius: 5px;
@@ -202,37 +341,44 @@ textarea {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 678px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
+@media screen and (max-width: 768px) {
   .burger {
     display: block;
   }
 
-  /* El menu lo queremos relativo a la pantalla del navegador por eso usamos position: fixed; */
   .menu {
-    margin: 0;
-    background: #f72585;
     position: fixed;
-    right: -100%;
     top: 70px;
-    width: 100%;
+    right: -100%;
+    width: 70%;
     height: calc(100% - 70px);
+    background: var(--color-acento);
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    z-index: 1;
-    transition: all 0.33s;
-  }
-
-  .menulink {
-    font-size: 1.2rem;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.4);
   }
 
   .menu-show {
     right: 0;
+  }
+
+  .menulink a {
+    font-size: 1.5rem;
+  }
+
+  .hero-logo {
+    width: 250px;
+  }
+
+  .lineup-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .day-box {
+    width: 90%;
   }
 }
