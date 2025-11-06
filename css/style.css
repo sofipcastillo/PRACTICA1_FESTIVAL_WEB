@@ -67,7 +67,7 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: var(--color-acento);
+  background: rgba(247, 37, 133, 0.9);
   color: #ccc;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -128,9 +128,10 @@ nav {
 
 /* LOGO NAME */
 .hero-logo {
-  width: 500px;
+  width: 420px;
   height: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 10px rgba(249, 200, 14, 0.3));
 }
 
 .hero h1 {
@@ -149,14 +150,16 @@ nav {
   background-color: var(--color-acento);
   color: var(--texto-claro);
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 40px;
   cursor: pointer;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .btn:hover {
   background-color: #f9c80e;
+  color: var(--texto-oscuro);
 }
 
 /* SECCIONES */
@@ -166,9 +169,9 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 section h2 {
@@ -206,20 +209,20 @@ section p {
   margin-top: 2rem;
 }
 
-/* Caja de cada día */
+/* CAJA CADA DIA */
 .day-box {
-  background-color: #2a2a55;
-  border: 2px solid var(--color-acento);
-  border-radius: 15px;
+  background-color: #23235a;
+  border: rgba(249, 200, 14, 0.3);
+  border-radius: 20px;
   width: 300px;
   padding: 2rem 1.5rem;
   position: relative;
-  box-shadow: 0 0 15px rgba(247, 37, 133, 0.3);
+  box-shadow: 0 0 10px rgba(247, 37, 133, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .day-box:hover {
-  transform: scale(1.03);
+  transform: scale(-5px);
   box-shadow: 0 0 25px rgba(247, 37, 133, 0.5);
 }
 
@@ -240,7 +243,7 @@ section p {
 /*  Texto de artistas */
 .artists h3 {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   margin: 0.6rem 0;
   color: #f9c80e;
@@ -254,6 +257,71 @@ section p {
   color: var(--texto-claro);
 }
 
+/* SECCION FOTOS DE ARTISTAS */
+.main-artists {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.main-artists h3 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--color-acento);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.artists-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.artist-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(249, 200, 14, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(247, 37, 133, 0.4);
+}
+
+.artist-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Nombre debajo */
+.artist-card p {
+  padding: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 768px) {
+  .artist-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .artist-card {
+    width: 90%;
+  }
+}
+
 /* FORMULARIO ENTRADAS */
 #form-entradas {
   display: flex;
@@ -265,8 +333,8 @@ section p {
   width: 100%;
   max-width: 400px;
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 15px;
   border: 1px solid var(--color-acento);
 }
 
@@ -290,6 +358,8 @@ section p {
   padding: 0.4rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #1b1b3a;
+  color: var(--texto-claro);
   text-align: center;
   font-size: 1rem;
 }
@@ -307,6 +377,7 @@ section p {
   width: 100%;
   margin-top: 1rem;
   font-size: 1.2rem;
+  font-weight: bold;
   color: var(--color-acento);
 }
 
@@ -358,7 +429,6 @@ textarea {
     align-items: center;
     gap: 2rem;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.4);
   }
 
   .menu-show {
@@ -380,5 +450,8 @@ textarea {
 
   .day-box {
     width: 90%;
+  }
+  .artist-card {
+    width: 45%;
   }
 }
