@@ -8,6 +8,7 @@
   --color-acento: #f72585;
   --texto-claro: #ffffff;
   --texto-oscuro: #1b1b3a;
+  --color-acento-2: #f9c80e;
 }
 
 * {
@@ -25,7 +26,12 @@ body.light-theme {
 }
 
 body.dark-theme {
-  background-color: var(--fondo-oscuro);
+  background: linear-gradient(
+    135deg,
+    var(--fondo-oscuro) 0%,
+    #0f1a3a 30%,
+    var(--color-acento) 100%
+  );
   color: var(--texto-claro);
 }
 
@@ -89,7 +95,7 @@ nav {
   font-size: 1.2rem;
 }
 
-.menulink:hover a {
+.menulink a:hover {
   color: #f9c80e;
 }
 
@@ -176,7 +182,7 @@ section {
 
 section h2 {
   color: var(--color-acento);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 section p {
@@ -212,17 +218,17 @@ section p {
 /* CAJA CADA DIA */
 .day-box {
   background-color: #23235a;
-  border: rgba(249, 200, 14, 0.3);
+  border: 1px solid rgba(249, 200, 14, 0.12);
   border-radius: 20px;
   width: 300px;
   padding: 2rem 1.5rem;
   position: relative;
-  box-shadow: 0 0 10px rgba(247, 37, 133, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(247, 37, 133, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .day-box:hover {
-  transform: scale(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 0 25px rgba(247, 37, 133, 0.5);
 }
 
@@ -232,12 +238,12 @@ section p {
   color: white;
   padding: 0.3rem 1rem;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: normal;
   position: absolute;
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /*  Texto de artistas */
@@ -266,7 +272,7 @@ section p {
 .main-artists h3 {
   font-family: "Orbitron", sans-serif;
   color: var(--color-acento);
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   letter-spacing: 1px;
@@ -309,7 +315,46 @@ section p {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 58, 0.9);
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-content {
+  background-color: #23235a;
+  border: 2px solid var(--color-acento);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  color: var(--texto-claro);
+  box-shadow: 0 0 15px rgba(249, 200, 14, 0.4);
+}
+
+.modal-content h3 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--color-acento);
+  margin-bottom: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: var(--color-acento-2);
+  font-size: 2rem;
+  cursor: pointer;
+}
 @media screen and (max-width: 768px) {
   .artist-card {
     width: 45%;
@@ -326,19 +371,20 @@ section p {
 #form-entradas {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 1rem;
-  margin: 2rem;
+  margin: 2rem auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 1.4rem;
+  border-radius: 12px;
   border: 1px solid var(--color-acento);
 }
 
 .entrada-item {
+  gap: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -346,6 +392,7 @@ section p {
 }
 
 .entrada-item label {
+  margin-right: 0.6rem;
   font-family: orbitron, sans-serif;
   flex: 1;
   text-align: left;
@@ -385,6 +432,34 @@ section p {
   background-color: gray;
   cursor: not-allowed;
   text-align: center;
+}
+
+/* UBICACIÓN */
+#ubicacion {
+  background: linear-gradient(
+    to bottom,
+    var(--fondo-oscuro),
+    var(--color-acento)
+  );
+  color: var(--texto-claro);
+  text-align: center;
+}
+
+#ubicacion h2 {
+  color: var(--color-acento-2);
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+}
+
+.mapa {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  border: 2px solid var(--color-acento);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(249, 200, 14, 0.3);
 }
 
 /* FORMULARIO DE CONTACTO */

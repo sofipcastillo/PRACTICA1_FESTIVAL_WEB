@@ -12,6 +12,14 @@
     <script defer src="js/script.js"></script>
   </head>
 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="cerrarModal" class="close">&times;</span>
+      <h3>¡Compra confirmada!</h3>
+      <p>Gracias por adquirir tus entradas. Nos vemos en el festival 🌙</p>
+    </div>
+  </div>
+
   <body class="dark-theme">
     <!-- Navegación principal -->
     <nav>
@@ -44,9 +52,7 @@
           class="hero-logo"
         />
         <h1>Luna Sound Festival</h1>
-        <p class="lead">
-          3 días de música, arte y buena vibra — 12, 13 y 14 de junio
-        </p>
+        <p class="lead">3 días de música, arte y buena vibra</p>
         <a href="#entradas" class="btn">Comprar Entradas</a>
       </div>
     </section>
@@ -187,8 +193,19 @@
     <section id="ubicacion" class="section">
       <div class="container">
         <h2>Ubicación</h2>
-        <p>Plaza Central</p>
-        <div class="mapa">mapa???</div>
+        <p>Auditorio del Parque Lineal del Manzanares, Madrid</p>
+
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.3152661528197!2d-3.6953505128693496!3d40.37970479782017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42265a5233a189%3A0xff7d8a3210f210ee!2sAuditorio%20del%20Parque%20Lineal%20del%20Manzanares!5e0!3m2!1ses!2ses!4v1762456675012!5m2!1ses!2ses"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
 
@@ -213,10 +230,7 @@
 
     <!-- Pie de página -->
     <footer>
-      <p>
-        © <span id="year"></span> Luna Sound Festival — creado por Sofia
-        Piedrahita
-      </p>
+      <p>© <span id="year"></span> Luna Sound Festival</p>
     </footer>
   </body>
 </html>

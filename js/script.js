@@ -45,3 +45,36 @@ document.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("input", calcularTotal);
   });
 });
+
+// MODAL DE CONFIRMACIÓN DE COMPRA
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const cerrarModal = document.getElementById("cerrarModal");
+  const comprarBtn = document.getElementById("comprarEntradas");
+  const formEntradas = document.getElementById("form-entradas");
+
+  formEntradas.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const total = document.getElementById("totalPrice").textContent;
+    if (parseFloat(total) > 0) {
+      modal.style.display = "flex";
+      formEntradas.reset();
+      document.getElementById("totalPrice").textContent = "0.00 €";
+      comprarBtn.classList.add("disabled");
+    } else {
+      alert("Por favor selecciona al menos una entrada.");
+    }
+  });
+
+  cerrarModal.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
